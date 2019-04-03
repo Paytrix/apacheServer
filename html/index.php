@@ -32,7 +32,16 @@ $response = array (
         ),
         'Waermepumpenzaehler' => array (
             getModbusData(2,20010,2,"kW")
-        )
+        ),
+        'Raumtemperatur' => array(
+            getModbusData(2,20024,2,"°C")
+        ),
+        'GesThermEnergie' => array (
+            getModbusData(2,20030,2)
+        ),
+        'RuecklauftempSolar' => array (
+            getModbusData(2,20028,2,"°C")
+        ),
     )
 );
 echo json_encode($response);
